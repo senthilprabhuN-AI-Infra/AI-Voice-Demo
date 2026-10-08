@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: ai-voice-form-backend
+    runtime: docker
+    plan: free
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    rootDir: ./backend
+    envVars:
+      # Render asks for these values when the Blueprint is created (copy them from .env)
+      - key: AZURE_SPEECH_KEY
+        sync: false
+      - key: AZURE_ENDPOINT_KEY
+        sync: false
+      - key: AZURE_OPENAI_KEY
+        sync: false
+      - key: AZURE_OPENAI_ENDPOINT
+        sync: false
+      - key: AZURE_OPENAI_DEPLOYMENT_NAME
+        sync: false

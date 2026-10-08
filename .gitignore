@@ -1,0 +1,7 @@
+# Secrets: set these as environment variables on Render instead
+.env
+
+__pycache__/
+*.pyc
+node_modules/
+dist/
